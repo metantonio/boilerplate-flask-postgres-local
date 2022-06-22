@@ -20,7 +20,7 @@ def enviarcorreo():
     #body = request.get_json()
      
    
-    correo = request.json.get("correo")
+    correo = request.json.post("correo")
     datab = {"JREmail":correo}
     r = requests.put(url = URL_BACKEND+"/usuarios/reset-password", json = datab) 
     #print("r: ", r) #devuelve 201
