@@ -1,7 +1,8 @@
 # Flask Boilerplate for Profesional Development
 
 ## Instalación (Windows)
-[Python 3.10.2](https://www.python.org/downloads/release/python-3102/)
+-[Python 3.10.2](https://www.python.org/downloads/release/python-3102/)
+-Copiar el .env.example con: `cp .env.example .env`.
 
 
 ## Features
