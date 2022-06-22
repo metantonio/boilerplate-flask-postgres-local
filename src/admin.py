@@ -1,6 +1,8 @@
 import os
 from flask_admin import Admin
-from models import db, User
+from .db import db
+from src.modelos import User #debemos importar los modelos en caso de trabajar con una base de datos
+
 from flask_admin.contrib.sqla import ModelView
 
 def setup_admin(app):
