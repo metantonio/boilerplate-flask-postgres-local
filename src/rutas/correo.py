@@ -13,14 +13,14 @@ EMAIL = os.environ.get('EMAIL')
 PASSWORD = os.environ.get('PASSWORD')
 URL_BACKEND = os.environ.get('BASE_URL')
 
-@app.route('/correo', methods=['GET'])
+@app.route('/correo', methods=['POST'])
 def enviarcorreo():
     smtp_address = 'smtp.gmail.com'
     smtp_port = 465
     #body = request.get_json()
      
    
-    correo = request.json.post("correo")
+    correo = request.json.get("correo")
     datab = {"JREmail":correo}
     r = requests.put(url = URL_BACKEND+"/usuarios/reset-password", json = datab) 
     #print("r: ", r) #devuelve 201
