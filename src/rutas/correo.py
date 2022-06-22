@@ -50,11 +50,11 @@ def enviarcorreo():
     html = '''
     <html>
     <body>
-    <h1>Hola</h1>
-    <p>Nueva Clave Generada: '''+ pastebin_url+''' </p>
+    <h1>Estimado Usuario:</h1>
+    <p>Se ha generado una nueva Clave Generada: '''+ pastebin_url+''' </p>
     <b>Saludos</b>
     <br>
-    <a href="https://www.github.com/metantonio">Link a una página</a>
+    <a href="https://www.github.com/metantonio">Kaizen Capital</a>
     </body>
     </html>
     '''
