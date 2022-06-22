@@ -15,11 +15,13 @@ PASSWORD = os.environ.get('PASSWORD')
 def enviarcorreo():
     smtp_address = 'smtp.gmail.com'
     smtp_port = 465
-    body = request.get_json()
-    correo = body.correo
+    #body = request.get_json()
+    
+    correo = request.json.get("correo")
+    #print(correo)
     email_address = EMAIL
     email_password = PASSWORD
-    print(email_address)
+    #print(email_address)
     email_receiver = correo
 
     # al crear un e-mail
