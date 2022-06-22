@@ -1,8 +1,14 @@
 # Flask Boilerplate for Profesional Development
 
 ## Instalación (Windows)
--[Python 3.10.2](https://www.python.org/downloads/release/python-3102/)
--Copiar el .env.example con: `cp .env.example .env`.
+- [Python 3.10.2](https://www.python.org/downloads/release/python-3102/)
+- Copiar el .env.example con: `cp .env.example .env`
+- Instalar pipenv: `pip install --user pipenv`
+- De momento no usaremos bases de datos relacionales por lo que no hace falta instalar MySQL o Postgres
+- Habilitar en las variables de entorno de windows, el comando de pipenv. Para esto, abrir el ejecutador de windows (Run) y colocar: `%AppData%`
+- Una vez abierta la carpeta AppData, navegar hasta: `\Roaming\Python\Python310\Scripts`, donde veremos el archivo `pipenv.py`
+- Abrir la ventana de Variables de Entorno, en variables de entorno del usuario debemos buscar la propiedad `Path`, y a continuación agregar la dirección de la carpeta donde se encuentran los scripts de Python.
+
 
 
 ## Features
@@ -15,7 +21,7 @@
 
 ## Installation (automatic if you are using gitpod)
 
-> Important: The boiplerplate is made for python 3.7 but you can easily change the `python_version` on the Pipfile.
+> Important: The boiplerplate is made for python 3.10.2 but you can easily change the `python_version` on the Pipfile.
 
 The following steps are automatically runned withing gitpod, if you are doing a local installation you have to do them manually:
 
