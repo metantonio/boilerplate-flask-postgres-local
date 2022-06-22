@@ -15,7 +15,7 @@ PASSWORD = os.environ.get('PASSWORD')
 def enviarcorreo():
     smtp_address = 'smtp.gmail.com'
     smtp_port = 465
-    print(EMAIL, PASSWORD)
+    
     email_address = EMAIL
     email_password = PASSWORD
     print(email_address)
