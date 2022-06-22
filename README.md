@@ -5,11 +5,16 @@
 - Copiar el .env.example con: `cp .env.example .env`
 - Instalar pipenv: `pip install --user pipenv`
 - De momento no usaremos bases de datos relacionales por lo que no hace falta instalar MySQL o Postgres
-- Habilitar en las variables de entorno de windows, el comando de pipenv. Para esto, abrir el ejecutador de windows (Run) y colocar: `%AppData%`
-- Una vez abierta la carpeta AppData, navegar hasta: `\Roaming\Python\Python310\Scripts`, donde veremos el archivo `pipenv.py`
-- Abrir la ventana de Variables de Entorno, en variables de entorno del usuario debemos buscar la propiedad `Path`, y a continuación agregar la dirección de la carpeta donde se encuentran los scripts de Python.
+- Habilitar en las variables de entorno de Windows, el comando de pipenv. Para esto, abrir el ejecutador de windows (Run) y colocar: `%AppData%`
+- - Una vez abierta la carpeta AppData, navegar hasta: `\Roaming\Python\Python310\Scripts`, donde veremos el archivo `pipenv.py`
+- - Abrir la ventana de Variables de Entorno, en variables de entorno del usuario debemos buscar la propiedad `Path`, y a continuación agregar la dirección de la carpeta donde se encuentran los scripts de Python.
+- - Al abrir nuevamente el comando de sistema (o reiniciar Visual Studio Code), debería reconocer el comando `pipenv`
+- - En la carpeta del proyecto, abrir el comando de sistema es instalar las dependencias en un entorno virtual con: `pipenv install`
 
+## Ejecutar el Boilerplate:
 
+- Lo primero será activar el entorno virtual creado para este proyecto, el cuál tendrá sus propias librerías independientemente a las instaladas en el sistema. Usar el comando: `pipenv shell`
+-Una vez ejecutado el entorno virtual, activaremos Flask con el comando preconfigurado: `pipenv run start`
 
 ## Features
 
