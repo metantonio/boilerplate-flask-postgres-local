@@ -1,4 +1,5 @@
 from ..main import request, jsonify, app
+import requests, json
 import smtplib, ssl
 import os
 from email.mime.text import MIMEText
@@ -10,14 +11,21 @@ from email import encoders
 
 EMAIL = os.environ.get('EMAIL')
 PASSWORD = os.environ.get('PASSWORD')
+URL_BACKEND = os.environ.get('BASE_URL')
 
 @app.route('/correo', methods=['GET'])
 def enviarcorreo():
     smtp_address = 'smtp.gmail.com'
     smtp_port = 465
     #body = request.get_json()
-    
+     
+   
     correo = request.json.get("correo")
+    datab = {"JREmail":correo}
+    r = requests.put(url = URL_BACKEND+"/usuarios/reset-password", json = datab) 
+    #print("r: ", r) #devuelve 201
+    pastebin_url = r.text #devuelve la clave nueva
+    #print("The response is:%s"%pastebin_url) 
     #print(correo)
     email_address = EMAIL
     email_password = PASSWORD
@@ -43,7 +51,7 @@ def enviarcorreo():
     <html>
     <body>
     <h1>Hola</h1>
-    <p>Nueva Carta</p>
+    <p>Nueva Clave Generada: '''+ pastebin_url+''' </p>
     <b>Saludos</b>
     <br>
     <a href="https://www.github.com/metantonio">Link a una página</a>
@@ -64,7 +72,7 @@ def enviarcorreo():
     with smtplib.SMTP_SSL(smtp_address, smtp_port, context=context) as server:  
         server.login(email_address, email_password)  
         server.sendmail(email_address, email_receiver, message.as_string())
-
+ 
     response_body = {
         "msg": "Mensaje Enviado "
     }
