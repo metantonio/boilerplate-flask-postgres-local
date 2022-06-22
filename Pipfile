@@ -20,7 +20,7 @@ mysqlclient = "*"
 flask-admin = "*"
 
 [requires]
-python_version = "3.10.2"
+python_version = "3.10"
 
 [scripts]
 start="flask run -p 3340 -h 0.0.0.0"
