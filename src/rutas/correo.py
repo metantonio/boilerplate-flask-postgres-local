@@ -23,8 +23,12 @@ def enviarcorreo():
     correo = request.json.get("correo")
     datab = {"JREmail":correo}
     r = requests.put(url = URL_BACKEND+"/usuarios/reset-password", json = datab) 
-    #print("r: ", r) #devuelve 201
+    print("r: ", r) #devuelve 201
     pastebin_url = r.text #devuelve la clave nueva
+    print(pastebin_url)
+    if pastebin_url=='"authorization: Sin autorización"':
+        print("Entra en el if")
+        return jsonify(pastebin_url), 403
     #print("The response is:%s"%pastebin_url) 
     #print(correo)
     email_address = EMAIL
