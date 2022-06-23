@@ -14,7 +14,7 @@
 ## Ejecutar el Boilerplate:
 
 - Lo primero será activar el entorno virtual creado para este proyecto, el cuál tendrá sus propias librerías independientemente a las instaladas en el sistema. Usar el comando: `pipenv shell`
--Una vez ejecutado el entorno virtual, activaremos Flask con el comando preconfigurado: `pipenv run start`
+- Una vez ejecutado el entorno virtual, activaremos Flask con el comando preconfigurado: `pipenv run start`
 
 ## Features
 
