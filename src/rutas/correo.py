@@ -81,5 +81,5 @@ def enviarcorreo():
         "msg": "Mensaje Enviado "
     }
 
-    return jsonify(response_body), 200
+    return jsonify('"authorization: correo enviado"'), 200
 
