@@ -39,7 +39,7 @@ db.init_app(app)
 CORS(app)
 setup_admin(app)
 from src.modelos import User #Aquí importamos los modelos registrador en el __init__.py de la carpeta modelos
-from src.rutas import enviarcorreo #Aquí importamos las rutas registradas en el __init__.py de la carpeta rutas
+from src.rutas import enviarcorreo, register_user #Aquí importamos las rutas registradas en el __init__.py de la carpeta rutas
 
 # Handle/serialize errors like a JSON object
 @app.errorhandler(APIException)
@@ -64,5 +64,5 @@ def handle_hello():
 
 # this only runs if `$ python src/main.py` is executed
 if __name__ == '__main__':
-    PORT = int(os.environ.get('PORT', 5432))
+    PORT = int(os.environ.get('PORT', 3340))
     app.run(host='0.0.0.0', port=PORT, debug=False)
